@@ -18,16 +18,8 @@ public class Board {
 		return rows;
 	}
 
-	public void setRows(int rows) {
-		this.rows = rows;
-	}
-
 	public int getColumns() {
 		return columns;
-	}
-
-	public void setColumns(int columns) {
-		this.columns = columns;
 	}
 	
 	public Piece piece(int row, int column) {
@@ -48,9 +40,7 @@ public class Board {
 		if(thereIsAPiece(position)) {
 			throw new BoardException("There is already a piece on position " + position);
 		}
-		
 		pieces[position.getRow()][position.getColumn()] = piece;
-	
 		piece.position = position;
 	}
 	
@@ -80,7 +70,4 @@ public class Board {
 		}
 		return piece(position) != null;
 	}
-
-	
-
 }
